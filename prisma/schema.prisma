@@ -22,6 +22,7 @@ model User {
   updatedAt     DateTime  @updatedAt
   sessions      Session[]
   accounts      Account[]
+  messages      Message[]
 
   @@unique([email])
   @@map("user")
@@ -73,4 +74,12 @@ model Verification {
 
   @@index([identifier])
   @@map("verification")
+}
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  content   String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
 }

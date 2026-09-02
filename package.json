@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "auth:generate": "npx @better-auth/cli generate --config ./src/lib/auth.ts --output ./prisma/schema.prisma"
   },
   "dependencies": {
     "@better-auth/prisma-adapter": "^1.7.2",
