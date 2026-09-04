@@ -255,7 +255,7 @@ export type MessageScalarWhereWithAggregatesInput = {
 export type MessageCreateInput = {
   content: string
   createdAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutMessagesInput
+  user: Prisma.UserCreateNestedOneWithoutMessageInput
 }
 
 export type MessageUncheckedCreateInput = {
@@ -268,7 +268,7 @@ export type MessageUncheckedCreateInput = {
 export type MessageUpdateInput = {
   content?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutMessagesNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutMessageNestedInput
 }
 
 export type MessageUncheckedUpdateInput = {
