@@ -1,3 +1,4 @@
+import { Chat } from "@/components/Chat";
 import auth from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
@@ -8,5 +9,6 @@ export default async function ChatPage() {
     redirect("/login");
   }
   const username = session.user.name;
-  return <main className="min-h-screen">{username}</main>;
+  const userId = session.user.id;
+  return <Chat username={username} userId={userId} />;
 }
